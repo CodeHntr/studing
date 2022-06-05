@@ -20,7 +20,6 @@
 		<?php
 		require'configBD.php';
         echo '<ul>';
-        echo 'Привіт, Світ!';
 		$query = $pdo->query('SELECT * FROM `tasks` ORDER BY `id` DESC');
 		while($row = $query->fetch(PDO::FETCH_OBJ)) {
 			echo'<li><b>'.$row->task.'</b><a href="/plan/delete.php?id='.$row->id.'"><button>Видалити</button></a></li>'; //Звертаємось до об'єкта роув та поля таск. Перебираємо всі дані і виводим 																		таск. 	
